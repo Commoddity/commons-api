@@ -14,7 +14,8 @@ Bills are updated daily and sorted by category on the server. Users can select b
 
 The application also provides an easy way to look up Members of Parliament and retrieve their contact information.
 
-## Behaviour 
+## Behaviour
+
 The server updates once every 24 hours from a variety of government data sources and pulls the latest bill and event data from them, then updates the data via a web based machine learning classification service. It then send notifications on those bills to all subscribed users.
 
 # Stack
@@ -66,21 +67,23 @@ Notifications are sent out using the following web services:
 - [Mitch Lum](https://github.com/mxmitch)
 - [Pascal van Leeuwen](https://github.com/Commoddity/)
 
-# Entity Relationship Diagram
-![Commons ERD](./docs/commons-ERD.png)
-
 # Configurations
 
-###Rake commands
+### Rake commands
+
 Database update tasks are run once every 24 hours as scheduled tasks
+
 ```
-rake db:update_database - Updates database with the latest bills and related events. 
+rake db:update_database - Updates database with the latest bills and related events.
 rake db:update_categories - Updates all bills in the catabase that were posted that day.
 ```
+
 Mail tasks are run once every 24 hours as scheduled tasks.
+
 ```
 rake notify:send_notifications - Sends out SMS and email notifications for all users who are subscribed.
 ```
+
 ### Setup
 
 - install `yarn`
