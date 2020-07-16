@@ -84,3 +84,6 @@ yarn-debug.log*
 
 # VS code workspace file
 *code-workspace
+
+# Secrets Backup
+/config/secrets_backup.yml
