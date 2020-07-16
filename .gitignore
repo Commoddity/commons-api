@@ -29,6 +29,7 @@ pickle-email-*.html
 config/initializers/secret_token.rb
 config/master.key
 config/local_env.yml
+config/secrets_backup.yml
 
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
